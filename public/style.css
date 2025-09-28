@@ -1,0 +1,209 @@
+/* public/styles.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #161516, #2575fc);
+  color: #333;
+  line-height: 1.6;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Glassmorphism card */
+.container {
+  background: rgba(99, 28, 28, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #eee;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
+
+/* Button */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Message */
+#msg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* Links */
+a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #ffd369;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* List */
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ffd369;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Back button */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: #fff !important;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  opacity: 0.9;
+}
+
+/* Search bar */
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+#search::placeholder {
+  color: #eee;
+}
+
+/* Participant cards */
+ul li {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-left: 4px solid #ffd369;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  color: #fff;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Avatar icon */
+ul li::before {
+  content: "\f007"; /* Font Awesome user icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffd369;
+}
